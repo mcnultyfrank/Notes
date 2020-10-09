@@ -6,35 +6,45 @@
     <link rel="stylesheet" href="styles.css">
 
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
     <header>
         <nav class = "top-nav">
+
+   
             <div class = "nav-buttons">
                 <button><i class="fas fa-pen-square"></i></button>
                 <button id = "save-button"><i class="fas fa-save"></i></button>
                 <button id = "delete-button"><i class="fas fa-trash"></i></button>
-                <button id = "up-font-size-button"><i class="fas fa-sort-down"></i></button>
-                <button id = "up-font-size-button"><i class="fas fa-sort-up"></i></button>
+     
             </div>
-
-
-
+            <div class="text-decoration">
+                <button><i class="fas fa-underline"></i></button>
+                <button><i class="fas fa-bold"></i></button>
+                <button><i class="fas fa-italic"></i></button>
+                <button id = "up-font-size-button"><i class="fas fa-minus"></i></button>
+                <button id = "up-font-size-button"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="page-align">
+                <button><i class="fas fa-align-left"></i></button>
+                <button><i class="fas fa-align-justify"></i></button>
+                <button><i class="fas fa-align-right"></i></button>
+            </div>
+            
+           
                 <div class  = "colour-select">
                     <button class = "red"></button>
                     <button class = "black"></button>
                     <button class = "green"></button>
                     <button class = "yellow"></button>
                 </div>
-                    <!-- <button>I</button>
-                    <button>U</button>
-                    <button>B</button> -->
         </nav>
     </header>
     <section>
         <nav class = "side-nav">
-            <h3>Folders</h3>
+            <h3><i class="fas fa-folder-open"></i></h3>
             <button>+</button>
         </nav>
     </section>
@@ -49,7 +59,7 @@
     <section>
         <article class = "typing-zone">
            <form class = "form-input">
-               <input type = "text" id = "user-text" class = "yellow__select red__select black__select green__select"  name = "user-text" autocomplete="off" placeholder="">
+               <input type = "text" id = "user-text" class = "user-input"  name = "user-text" autocomplete="off" placeholder="">
                <!-- <input type = "submit" id ="submit-text" name = "submit-text"> -->
            </form>
         </article>
@@ -62,5 +72,8 @@
 
     <script src="https://kit.fontawesome.com/d08936fb1e.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 </body>
 </html>
