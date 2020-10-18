@@ -50,8 +50,10 @@
   transition: 0.1s ease;
 }
 .top-nav button:hover {
-  color: black;
-  border: 1px solid black;
+  color: #425559;
+  border: none;
+  border: 1px solid #425559;
+  background-color: #FFD168;
 }
 
 .colour-select {
@@ -66,6 +68,7 @@
 }
 .colour-select *:hover {
   border: 0.2vh solid black;
+  background-color: none;
 }
 .colour-select .red {
   position: absolute;
@@ -149,9 +152,9 @@
   height: 90vh;
   border-right: 1px solid #0D0D0D;
 }
-.side-note-selector h3 {
+.side-note-selector h2 {
   position: relative;
-  padding-left: 2vw;
+  padding-left: 0.5vw;
   padding-top: 4vh;
   padding-bottom: 4vh;
   text-decoration: none;
@@ -162,10 +165,10 @@
   margin-bottom: none;
   cursor: pointer;
 }
-.side-note-selector h3:hover {
+.side-note-selector h2:hover {
   background-color: #FFD168;
 }
-.side-note-selector h3 i {
+.side-note-selector h2 i {
   position: absolute;
   border: none;
   cursor: pointer;
@@ -187,6 +190,7 @@
   right: 0;
 }
 .typing-zone #user-text {
+  display: flex;
   padding-top: 5vh;
   padding-left: 5vw;
   padding-bottom: 60vh;

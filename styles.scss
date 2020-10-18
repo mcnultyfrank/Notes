@@ -54,11 +54,14 @@
         cursor: pointer;
         transition: 0.1s ease;
         &:hover{
-        color: black;
-        border: 1px solid black;
+        color: #425559;
+        border: none;
+        border: 1px solid #425559;
+        background-color: #FFD168;
 
         } 
     }
+    
 
 }
 .colour-select{
@@ -73,6 +76,8 @@
     }
     & *:hover{
         border: 0.2vh solid black;
+        background-color: none;
+
 
     }
     .red{
@@ -176,9 +181,9 @@
     height: 90vh;
     border-right: 1px solid #0D0D0D;
     
-        h3{
+        h2{
             position: relative;
-            padding-left: 2vw;
+            padding-left: 0.5vw;
             padding-top: 4vh;
             padding-bottom: 4vh;
             text-decoration: none;
@@ -216,6 +221,8 @@
     top: 10vh;
     right: 0;
     #user-text{
+        display: flex;
+
         padding-top: 5vh;
         padding-left: 5vw;
         padding-bottom: 60vh;
