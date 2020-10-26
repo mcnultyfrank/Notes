@@ -7,59 +7,39 @@ var addNote = document.getElementById("save-button"); // submit new note
 var userText = document.querySelector("#user-text");
 var addToNoteSection = document.querySelector(".new-note-container"); // adds new note to note section
 
-var dummyText = ["hi there", "person"];
 var deleteButton = document.querySelector("#delete-button");
 var yellow = document.querySelector(".yellow");
 var black = document.querySelector(".black");
 var red = document.querySelector(".red");
 var green = document.querySelector(".green");
+var underline = document.querySelector(".fa-underline");
 var bold = document.querySelector(".fa-bold");
 var italic = document.querySelector(".fa-italic");
 var alignLeft = document.querySelector(".fa-align-left");
 var alignRight = document.querySelector(".fa-align-right");
-var name = 'frank';
-var largeFontSize = +"30";
-var xLargeFontSize = largeFontSize + 5;
-var xxLargeFontSize = xLargeFontSize + 5;
-var xxxLargeFontSize = xxLargeFontSize + 5;
-var xxxxLargeFontSize = xxxLargeFontSize + 5;
-var fontSizes = [+"30", +"35", +"40", +"45", +"50"];
-document.querySelector(".fa-plus").addEventListener("click", function (e) {
-  for (var index = 0; index < fontSizes.length; index++) {
-    userText.style.fontSize = fontSizes[index] + "px";
-    console.log(fontSizes);
-  }
-}); // Colour change events
+var fontSizePick = document.querySelector(".fontValueContainer");
+fontSizePick.addEventListener("click", function (e) {
+  userText.style.fontSize = e.target.value + "px";
+});
 
-yellow.addEventListener("click", function (e) {
-  userText.style.color = "#F2E85C";
-});
-green.addEventListener("click", function (e) {
-  userText.style.color = "#1E5601";
-});
-black.addEventListener("click", function (e) {
-  userText.style.color = "#0D0D0D";
-});
-red.addEventListener("click", function (e) {
-  userText.style.color = "#E50000";
-});
+var colourPick = function colourPick(colour, hexColour) {
+  colour.addEventListener("click", function (e) {
+    userText.style.color = hexColour;
+  });
+};
+
+colourPick(yellow, "#F2E85C");
+colourPick(green, "#1E5601");
+colourPick(black, "#0D0D0D");
+colourPick(red, "#E50000");
 bold.addEventListener("click", function (e) {
-  if (userText.style.fontWeight !== "600") {
-    userText.style.fontWeight = "600";
-  } else if (userText.style.fontWeight == "600") {
-    userText.style.fontWeight = "normal";
-  }
-
-  ;
+  userText.style.fontWeight !== "600" ? userText.style.fontWeight = "600" : userText.style.fontWeight = "normal";
 });
 italic.addEventListener("click", function (e) {
-  if (userText.style.fontStyle == "italic") {
-    userText.style.fontStyle = "normal";
-  } else if (userText.style.fontStyle !== "italic") {
-    userText.style.fontStyle = "italic";
-  }
-
-  ;
+  userText.style.fontStyle == "italic" ? userText.style.fontStyle = "normal" : userText.style.fontStyle = "italic";
+});
+underline.addEventListener("click", function (e) {
+  userText.style.textDecoration == "underline" ? userText.style.textDecoration = "none" : userText.style.textDecoration = "underline";
 });
 deleteButton.addEventListener("click", function (e) {
   document.querySelector(".form-input").reset();
