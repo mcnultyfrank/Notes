@@ -55,12 +55,5 @@ addNote.addEventListener("click", function (e) {
   addToNoteSection.addEventListener("click", function (e) {
     userInput.value = addToNoteSection.innerText.slice(0, -3);
   });
-}); //copy whatever text is in Notevalue and paste it in userInput
-
-document.querySelector(".remove-note").addEventListener("click", function (e) {
-  console.log('hi');
-  addToNoteSection.innerText = "";
 });
-document.querySelector("#user-text").style.alignContent = "flex-end"; // addNote.addEventListener("click", e => {
-//     userInput.submit();
-// })
+document.querySelector("#user-text").style.alignContent = "flex-end";

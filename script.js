@@ -37,8 +37,6 @@ underline.addEventListener("click", e => {
     userText.style.textDecoration == "underline" ? userText.style.textDecoration = "none" : userText.style.textDecoration = "underline";
 })
 
-
-
 deleteButton.addEventListener("click", e => {
     document.querySelector(".form-input").reset();
 });
@@ -52,17 +50,7 @@ addNote.addEventListener("click", e => {
         userInput.value = addToNoteSection.innerText.slice(0, -3);
     });
 });
-//copy whatever text is in Notevalue and paste it in userInput
-
-document.querySelector(".remove-note").addEventListener("click", e =>{
-    console.log('hi');
-    addToNoteSection.innerText = "";
-});
 
 document.querySelector("#user-text").style.alignContent = "flex-end";
 
 
-// addNote.addEventListener("click", e => {
-//     userInput.submit();
-    
-// })
