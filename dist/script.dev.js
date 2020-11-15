@@ -18,6 +18,8 @@ var italic = document.querySelector(".fa-italic");
 var alignLeft = document.querySelector(".fa-align-left");
 var alignRight = document.querySelector(".fa-align-right");
 var fontSizePick = document.querySelector(".fontValueContainer");
+var newFolder = document.querySelector(".newFolder");
+var storeNotes = [];
 fontSizePick.addEventListener("click", function (e) {
   userText.style.fontSize = e.target.value + "px";
 });
@@ -45,15 +47,24 @@ deleteButton.addEventListener("click", function (e) {
   document.querySelector(".form-input").reset();
 });
 addNote.addEventListener("click", function (e) {
-  var noteValue = "<h2>".concat(userInput.value.substr(0, 20) + "...", "<i class=\"fas remove-note fa-minus\"></i></h2>");
+  storeNotes.push(userInput.value);
+  var noteValue = "<h2>".concat(storeNotes.map(function (e) {
+    return e;
+  }).pop() + "...", "<i class=\"fas remove-note fa-minus\"></i></h2>");
 
   if (userInput.value !== "") {
+    console.log(noteValue);
     addToNoteSection.innerHTML += noteValue;
     document.querySelector(".form-input").reset();
   }
 
   addToNoteSection.addEventListener("click", function (e) {
-    userInput.value = addToNoteSection.innerText.slice(0, -3);
+    userInput.value = storeNotes.map(function (e) {
+      return e;
+    }); // userInput.value = addToNoteSection.textContent.slice(0, -3);
   });
 });
 document.querySelector("#user-text").style.alignContent = "flex-end";
+newFolder.addEventListener("click", function (e) {
+  alert("Folder functionality still in development");
+});
