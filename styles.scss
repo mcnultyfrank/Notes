@@ -224,7 +224,7 @@
             padding-top: 4vh;
             padding-bottom: 4vh;
             text-decoration: none;
-            font-size: 2vw;
+            font-size: 3vw;
             font-weight: 100;
             border-bottom: 0.5px solid #999999;
             transition: 0.1s;
@@ -274,7 +274,7 @@
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 578px){
     * {
         max-height: 100vh;
     }
@@ -294,6 +294,7 @@
         left: 90vw;
         justify-content: start;
         #up-font-size-button{
+
             &:hover, :focus ~ .fontValueContainer{
                 display: contents;
                 display: flex;

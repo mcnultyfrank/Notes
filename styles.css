@@ -232,7 +232,7 @@
   font-size: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 578px) {
   * {
     max-height: 100vh;
   }

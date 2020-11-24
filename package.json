@@ -1,0 +1,14 @@
+{
+  "name": "Notes",
+  "scripts": {
+    "test": "jest"
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mcnultyfrank/Notes.git",
+  "author": "Frank McNulty <frank.mcnulty@nology.io>",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1"
+  }
+}

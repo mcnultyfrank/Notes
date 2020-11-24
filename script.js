@@ -41,18 +41,18 @@ underline.addEventListener("click", e => {
 deleteButton.addEventListener("click", e => {
     document.querySelector(".form-input").reset();
 });
-addNote.addEventListener("click", e => {
+addNote.addEventListener("click", () => {
     storeNotes.push(userInput.value);
-    const noteValue = `<h2>${storeNotes.map(e => e).pop() + "..."}<i class="fas remove-note fa-minus"></i></h2>`
+    const noteValueElement = document.createElement(`h2`)
+    noteValueElement.innerText = `${storeNotes.map(e => e).pop()}`;
     if(userInput.value !== ""){
-        console.log(noteValue   );
-            addToNoteSection.innerHTML += noteValue;
-                document.querySelector(".form-input").reset();
+        addToNoteSection.appendChild(noteValueElement);
+        console.log(addToNoteSection.innerHTML); 
+        document.querySelector(".form-input").reset();
     }
-    addToNoteSection.addEventListener("click", e => {
-        userInput.value = storeNotes.map(e => e);
-        // userInput.value = addToNoteSection.textContent.slice(0, -3);
-    });
+        noteValueElement.addEventListener("click", e => {
+                userInput.value = noteValueElement.innerHTML;
+        });
 });
 
 document.querySelector("#user-text").style.alignContent = "flex-end";

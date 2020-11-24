@@ -50,19 +50,23 @@ addNote.addEventListener("click", function (e) {
   storeNotes.push(userInput.value);
   var noteValue = "<h2>".concat(storeNotes.map(function (e) {
     return e;
-  }).pop() + "...", "<i class=\"fas remove-note fa-minus\"></i></h2>");
+  }).pop() + "...", "</h2>");
 
   if (userInput.value !== "") {
-    console.log(noteValue);
     addToNoteSection.innerHTML += noteValue;
     document.querySelector(".form-input").reset();
   }
 
-  addToNoteSection.addEventListener("click", function (e) {
-    userInput.value = storeNotes.map(function (e) {
-      return e;
-    }); // userInput.value = addToNoteSection.textContent.slice(0, -3);
-  });
+  var _loop = function _loop(i) {
+    addToNoteSection.addEventListener("click", function (e) {
+      console.log(storeNotes[i]);
+      userInput.value = storeNotes[i];
+    });
+  };
+
+  for (var i = 0; i < storeNotes.length; i++) {
+    _loop(i);
+  }
 });
 document.querySelector("#user-text").style.alignContent = "flex-end";
 newFolder.addEventListener("click", function (e) {
