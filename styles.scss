@@ -17,6 +17,7 @@
     justify-content: flex-end;
     border-bottom: 1px solid #0D0D0D;
     height: 10vh;
+  
     #up-font-size-button{
         &:hover ~ .fontValueContainer{
             display: contents;
@@ -49,11 +50,14 @@
 
         }
     }
-   
+    .logInSection {
+        position: relative;
+
+    }
     .text-decoration{
         position: relative;
         border-left: 0.5px solid #0D0D0D;
-        margin: 5px 5px 5px 5px;
+
        
       
     }
@@ -61,12 +65,10 @@
     .page-align{
         position: relative;
         border-left: 0.5px solid #0D0D0D;
-        margin: 5px 5px 5px 5px;
     }
     .nav-buttons{
         position: relative;
         border-left: 0.5px solid #0D0D0D;
-        margin: 5px 5px 5px 5px;
 
     }
     
