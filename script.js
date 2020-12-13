@@ -14,7 +14,11 @@ const alignLeft = document.querySelector(".fa-align-left");
 const alignRight = document.querySelector(".fa-align-right");
 const fontSizePick = document.querySelector(".fontValueContainer");
 const newFolder = document.querySelector(".newFolder");
+const signUpButton = document.querySelector(".logInButton");
 const storeNotes = [];
+
+
+
 
 fontSizePick.addEventListener("click", e => {
     userText.style.fontSize = e.target.value + "px";
@@ -41,15 +45,17 @@ underline.addEventListener("click", e => {
 deleteButton.addEventListener("click", e => {
     document.querySelector(".form-input").reset();
 });
+userInput.addEventListener("keydown", e => e.keyCode === 13 ? e.preventDefault() : false );
+
 addNote.addEventListener("click", () => {
     storeNotes.push(userInput.value);
     const noteValueElement = document.createElement(`h2`)
     noteValueElement.innerText = `${storeNotes.map(e => e).pop()}`;
     if(userInput.value !== ""){
         addToNoteSection.appendChild(noteValueElement);
-        console.log(addToNoteSection.innerHTML); 
         document.querySelector(".form-input").reset();
     }
+
         noteValueElement.addEventListener("click", e => {
                 userInput.value = noteValueElement.innerHTML;
         });
@@ -60,4 +66,6 @@ document.querySelector("#user-text").style.alignContent = "flex-end";
         alert("Folder functionality still in development");
 })
 
-
+signUpButton.addEventListener(("click"), () => {
+    firebase.auth().signInWithRedirect(provider);
+})

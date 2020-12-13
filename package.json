@@ -9,6 +9,7 @@
   "author": "Frank McNulty <frank.mcnulty@nology.io>",
   "license": "MIT",
   "dependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.12.1"
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
+    "firebase": "^8.1.1"
   }
 }
